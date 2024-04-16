@@ -8,13 +8,13 @@ return [
     |The App consumer key
     |------------------------------------------
     */
-    'consumer_key'   => 'ZtkRW6ATbVtFpNml5w5SfG26Adfyagn9',
+    'consumer_key'   => 'qSP3EdQi1EExD5eZkjK8wz1tNHU48GBRTQNiSnGNhYzRTmuk',
 
     /*-----------------------------------------
     |The App consumer Secret
     |------------------------------------------
     */
-    'consumer_secret' => 'dosFI1yQ8bvHEVFw',
+    'consumer_secret' => 'imd3pxzMvFr9IxfwHhaRNaZN83q0a0uWFfsrlkpPKchJtaTBUu7BTUrsutby6pAk',
 
     /*-----------------------------------------
     |The paybill number
@@ -50,7 +50,7 @@ return [
     |Test phone Number
     |------------------------------------------
     */
-    'test_msisdn ' => '254708374149',
+    'test_msisdn ' => '243824696963',
 
     /*-----------------------------------------
     |Lipa na Mpesa Online callback url

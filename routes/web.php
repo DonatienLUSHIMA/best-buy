@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\LocalisationLanguagecontroller;
+use App\Http\Controllers\MpesaController;
+use App\Http\Controllers\ProfilePhotoController;
 use App\Http\Controllers\SearchController;
 use App\Models\Commande;
 
@@ -53,7 +55,8 @@ Route::get('/ajouterPanier/{produit}', [PanierController::class, 'ajouterPanier'
 Route::post('/savePanier/{produit}', [PanierController::class, 'savePanier'])->name('savePanier');
 Route::post('/finaliser-commande', [PanierController::class, 'finaliserCommande'])->name('finaliser.commande');
 Route::get('/update-total-general', [PanierController::class,'updateTotalGeneral'])->name('updateTotalGeneral');
-
+//paiement
+Route::post('/paiement', [MpesaController::class,'initierPaiement'])->name('Mpesa.paiement');
 //Route email
 
 Route::get('/forms',[MessageController::class,'formMessageGoogle']);
@@ -74,9 +77,6 @@ Route::get('/searchMs', [SearchController::class, 'search'])->name('searchs');
 //Routes Admin
 Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
 Route::resource('users', 'UsersController');
-
-//Route Chart
-
 
 
 });

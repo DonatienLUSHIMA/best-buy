@@ -40,7 +40,7 @@ class LoginController extends Controller
     }
     protected function redirectTo()
 {
-    if (Auth::user()->roles->pluck('name')->contains('admin')) {
+    if (Auth::user()->roles->pluck('name')->contains('Admin')) {
         return '/admin/users/homeadmin'; // Redirect to the route corresponding to admin users
     } elseif (Auth::user()->roles->pluck('name')->contains('auteur')) {
         return '/author/dashboard'; // Redirect to the route corresponding to author users (adjust according to your structure)

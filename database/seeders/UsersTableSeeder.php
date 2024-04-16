@@ -19,11 +19,12 @@ class UsersTableSeeder extends Seeder
         // Réactiver les contraintes de clé étrangère
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        // Insérer les données de seed
+        // Insérer les données de seed avec le chemin de l'image correct
         DB::table('users')->insert([
             'name' => 'Donat',
             'email' => 'donat@gmail.com',
             'password' => bcrypt('password'),
+            'profile_photo_path' => asset('images/lds.jpg'), // Utilisation de la fonction asset() pour obtenir le chemin public correct
         ]);
 
         // Attacher l'utilisateur au rôle 'User' (ajustez l'ID du rôle en conséquence)

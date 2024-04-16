@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Addi marchandise</title>
+
     <script src="{{ asset('js/app.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     <style>
         body{
             background: white;
@@ -67,8 +61,7 @@
             font-family: 'Bernard MT Condensed', sans-serif;
         }
     </style>
-</head>
-<body>
+
     @extends('layouts.app')
 
     @section('content')
@@ -121,6 +114,3 @@
             }
         }
     </script>
-
-</body>
-</html>

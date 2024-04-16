@@ -133,8 +133,7 @@ public function finaliserCommande()
         DB::commit();
 
         session()->forget('paniers');
-
-        return redirect()->route('marchandises.displayM')->with('success', 'Commande enregistrée avec succès !')->with('total_general', $total_general);
+         return view('mpesa.paiement')->with('total_general', $total_general);;
     } catch (\Exception $e) {
         // Ajouter cette ligne pour voir l'erreur en cas d'échec
         dd('Erreur lors de la création de la commande', $e->getMessage());

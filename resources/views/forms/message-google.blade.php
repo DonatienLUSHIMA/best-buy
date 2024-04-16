@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Le formulaire d envoi du message</title>
     <style>
         /* ... Votre style CSS existant ... */
         .user-list {

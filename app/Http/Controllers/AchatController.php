@@ -6,6 +6,7 @@ use App\Models\DetailsCommande;
 use App\Models\Marchandise;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -35,7 +36,7 @@ class AchatController extends Controller
 
         $request->validate([
 
-            // Validez les autres champs ici...
+
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validation pour le champ image
         ]);
 
@@ -50,7 +51,7 @@ class AchatController extends Controller
         // Gérer le téléchargement de l'image
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('public');
-            $marchandise->image = str_replace('public/', '', $imagePath);
+            $marchandise->image = str_replace('storage/app/public/marchandises', '', $imagePath);
         }
 
 

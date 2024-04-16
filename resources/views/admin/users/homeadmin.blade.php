@@ -39,11 +39,30 @@
             font-size: 36px;
         }
         #graphique{
-            margin-top: 10%;
+            margin-top: 05%;
             margin-right: 500px;
             width: 50%;
         }
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+        }
 
+        .carousel img {
+            width: 50%;
+            height: 50%;
+            display: none;
+        }
+
+        .carousel img:first-child {
+            display: block;
+        }
+        .Conteairecarousel{
+            background-color: rgb(227, 236, 243);
+        }
+        .footer{
+            background-color: blue;
+        }
     </style>
 
 @extends('layouts.app')
@@ -84,6 +103,47 @@
                             data: @json($chartData),
                         });
                     });
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        let currentIndex = 0;
+                        const images = document.querySelectorAll('.carousel img');
+                        const totalImages = images.length;
+
+                        function showImage(index) {
+                            images.forEach((img, i) => {
+                                if (i === index) {
+                                    img.style.display = 'block';
+                                } else {
+                                    img.style.display = 'none';
+                                }
+                            });
+                        }
+
+                        function nextImage() {
+                            currentIndex = (currentIndex + 1) % totalImages;
+                            showImage(currentIndex);
+                        }
+
+                        setInterval(nextImage, 4000); // Change d'image toutes les 2 secondes (2000ms)
+                    });
+
                 </script>
 </center>
+<div class="Conteairecarousel">
+    <div class="carousel">
+        <img src="{{ asset('images/icone.png') }}" alt="Image 1">
+        <img src="{{ asset('images/1.png') }}" alt="Image 1">
+        <img src="{{ asset('images/2.jpg') }}" alt="Image 2">
+        <img src="{{ asset('images/4.jpg') }}" alt="Image 4">
+        <img src="{{ asset('images/5.png') }}" alt="Image 5">
+        <img src="{{ asset('images/6.jpg') }}" alt="Image 6">
+        <img src="{{ asset('images/7.jpg') }}" alt="Image 7">
+        <img src="{{ asset('images/8.png') }}" alt="Image 8">
+        <img src="{{ asset('images/9.jpg') }}" alt="Image 9">
+        <img src="{{ asset('images/10.jpg') }}" alt="Image 10">
+
+        <img  alt="Image 3">
+    </div>
+</div>
+
 @endsection

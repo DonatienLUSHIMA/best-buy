@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <title>Messages</title>
+        <title>Zénith ieformatique</title>
+        <link rel="icon" type="image/png" href="{{ asset('images/icone.png') }}">
     <style>
         body{
             background: white;
@@ -27,7 +28,7 @@
         }
         .button {
             background: white;
-            color:#4285f4;
+            color:#0864f7;
             font-size: 30px;
             cursor: pointer;
             margin-right: 25px;

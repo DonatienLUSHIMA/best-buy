@@ -16,7 +16,9 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "mindscms/laravelshoppingcart": "^2.1",
-        "prettus/l5-repository": "^2.9"
+        "munafio/chatify": "^1.6",
+        "prettus/l5-repository": "^2.9",
+        "safaricom/mpesa": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

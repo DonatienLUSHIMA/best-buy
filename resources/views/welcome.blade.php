@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
-    <title>Laravel</title>
-
-    <!-- Styles -->
+    <title>Accueil</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/icone.png') }}">
     <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            @keyframes slideBackground {
+                0% {
+                    background-position: left top, right top;
+                }
+                100% {
+                    background-position: right top, left top;
+                }
+            }
             .PS {
                 font-family: 'Nunito', sans-serif;
                 display: flex;
@@ -21,31 +34,27 @@
                 margin-right: 20px;
                 width: 300px;
                 height: 100px;
-            }
-
-            #Section1 {
                 background: rgb(179, 177, 177);
             }
 
-            #Section2 {
-                background: rgb(179, 177, 177);
+            div{
+                border-radius: 40px;
             }
 
             #Section3 {
                 background: white;
-                padding: 40px;
-                margin-right: 20px;
-                width: 300px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 100%;
+                text-align: center;
+                margin-right: 100px;
             }
 
-            .Part2 {
-                margin-top: 10px;
-                margin-left: 500px;
-            }
+
 
             #btn {
                 text-decoration: none;
-                background: blue;
+                background: #515cf3;
                 color: white;
                 font-family: 'Times New Roman', Times, serif;
                 font-size: 14px;
@@ -63,12 +72,13 @@
             }
 
             .dropbtn {
-                background-color: #3498DB;
+                background-color: #515cf3;;
                 color: white;
                 padding: 16px;
                 font-size: 16px;
                 border: none;
                 cursor: pointer;
+                border-radius: 20px;
             }
 
             .dropbtn:hover, .dropbtn:focus {
@@ -192,7 +202,7 @@
                         </div>
                     </div>
                     <div style="margin-bottom: 5px;">
-                        <div class="fi fi-de" style="vertical-align: middle; display: inline-flex;">
+                        <div class="fi fi-de" style="vertical-align: middle; display: inline-flex;" id="bouton">
                             <a href="#" onclick="selectLanguage('cd', 'Allemande')" style="margin-left: 10px;">Allemande</a>
                         </div>
                     </div>

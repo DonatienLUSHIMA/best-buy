@@ -83,6 +83,7 @@ return[
     'Edit Product' => 'Edit Product',
     'Available Goods' => 'Available Goods',
     'Language' => 'Language',
+    'Adress'=>'Adress'
 
 ];
 ?>
